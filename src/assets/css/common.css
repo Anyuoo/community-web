@@ -1,0 +1,79 @@
+/* 公共样式 */
+
+
+/* 小标题 */
+
+.font-small-title {
+    font-style: normal;
+    font-family: "PingFang SC";
+    font-size: 16px;
+}
+
+
+/* 标题 */
+
+.font-title {
+    font-style: normal;
+    font-family: "PingFang SC";
+    font-size: 18px;
+}
+
+
+/* 描述信息-小 */
+
+.font-extra-small {
+    font-style: normal;
+    font-family: "PingFang SC";
+    font-size: 12px;
+}
+
+
+/* 正文-小 */
+
+.font-small {
+    font-style: normal;
+    font-family: "PingFang SC";
+    font-size: 13px;
+}
+
+
+/* 正文 */
+
+.font-base {
+    font-style: normal;
+    font-family: "PingFang SC";
+    font-size: 14px;
+}
+
+
+/* 浅色时间色度 */
+
+.color-gray-a {
+    color: #999;
+}
+
+.color-base {
+    color: #606266;
+}
+
+.color-normal {
+    color: #909399;
+}
+
+
+/* 图标边距 */
+
+.icon-mg-r {
+    margin-right: 3px;
+}
+
+i {
+    font-style: normal;
+}
+
+
+/* 去掉原点 */
+
+ul {
+    list-style: none;
+}

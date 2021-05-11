@@ -1,0 +1,5 @@
+
+mutation Login ($principal: String!, $password: String!) {
+    login(principal: $principal, password: $password) 
+}
+

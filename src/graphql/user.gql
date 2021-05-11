@@ -1,0 +1,59 @@
+# 发送邮箱验证码
+mutation SendVerifyCode($email: String!) {
+    sendVerifyCode(email: $email)
+}
+
+mutation Register($email:String!,$password:String!,$code:String!){
+    register(email:$email,password:$password,code:$code)
+}
+
+# 修改邮箱验证码
+mutation SendEmailUpdateCode($email:String!){
+    sendEmailUpdateCode(email: $email)
+}
+#修改密码
+mutation UpdatePassword($password: String!){
+    updatePassword(password: $password)
+}
+#修改邮箱
+mutation UpdateEmail($email:String!,$code:String!){
+    updateEmail(email:$email,code:$code)
+}
+#修改用户信息
+mutation UpdateUserInfo($userInput: UserInput!){
+    updateUserInfo(userInput: $userInput)
+}
+# 登录用户
+query GetLoginUser{
+    loginUser{
+        #用户ID
+        id
+        #用户真实名
+        realName
+        #性别
+        gender
+        #年龄
+        age
+        #生日
+        birthday
+        #用户账号
+        account
+        #用户昵称
+        nickname
+        #头像地址
+        avatar
+        #邮箱
+        email
+        #手机号
+        mobile
+        #用户信息创建时间
+        createTime
+        #用户信息修改时间
+        modifiedTime
+    }
+}
+
+
+mutation UploadAvatar($avatar:Upload!){
+    uploadAvatar(avatar: $avatar)
+}

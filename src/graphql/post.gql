@@ -1,0 +1,57 @@
+# 发布帖子
+mutation PublishPost($postInput: PostInput!){
+    publishPost(postInput: $postInput)
+}
+
+
+query Posts($first: Int,$after:String,$condition: PostQueryCondition){
+    posts(first: $first,after:$after,condition:$condition){
+        pageInfo{
+            hasNextPage
+            hasPreviousPage
+            startCursor
+            endCursor
+        }
+        edges{
+            cursor
+            node{
+                id
+                title
+                likeNum
+                likeStatus
+                cmtNum
+                cmtStatus
+                lookNum
+                createTime
+                publisher{
+                    account
+                    nickname
+                    avatar
+                }
+            }
+        }
+    }
+}
+
+query Post($id: ID!){
+    postDetails(id: $id){
+        id
+        title
+        content
+        likeNum
+        likeStatus
+        cmtNum
+        cmtStatus
+        lookNum
+        createTime
+        publisher{
+            account
+            nickname
+            avatar
+        }
+    }
+}
+
+mutation PostLike($postId: Int!){
+    postLike(postId: $postId)
+}
