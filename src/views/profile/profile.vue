@@ -12,11 +12,17 @@
           <div class="user-info">
             <!-- 头像 -->
             <div class="user-info-avatar" @click="avatarToggleShow">
-              <el-avatar
-                fit="contain"
-                :size="80"
-                :src="userInfo.avatar"
-              ></el-avatar>
+              <el-tooltip
+                content="点击修改头像"
+                placement="bottom"
+                effect="light"
+              >
+                <el-avatar
+                  fit="contain"
+                  :size="80"
+                  :src="userInfo.avatar"
+                ></el-avatar>
+              </el-tooltip>
             </div>
             <!-- 头像编辑 -->
             <image-upload
@@ -303,6 +309,7 @@
   .user-info-avatar {
     display: flex;
     justify-content: center;
+    cursor: pointer;
   }
   .user-info-item {
     margin-bottom: 15px;

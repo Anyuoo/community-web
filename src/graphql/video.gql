@@ -1,3 +1,47 @@
-mutation UploadVideoCover($cover: Upload!){
-    uploadVideoCover(cover:$cover)
+# 上传视频
+mutation PublishVideo($input:VideoInput!){
+    publishVideo(input:$input)
+}
+
+query ListVideos($size:Int,$after:String){
+    listVideos(size:$size,after:$after){
+        pageInfo{
+            hasNextPage
+            hasPreviousPage
+            startCursor
+            endCursor
+        }
+        edges{
+            cursor
+            node{
+                id
+                title
+                coverUrl
+                videoUrl
+                publisher{
+                    id
+                    nickname
+                    avatar
+                }
+            }
+        }
+    }
+}
+
+
+fragment Video on VideoVo {
+    id
+    publisher
+    title
+    videoUrl
+    coverUrl
+}
+
+type VideoVo{
+    id:ID
+    publisher: User
+    title:String
+    desc:String
+    videoUrl:String
+    coverUrl:String
 }

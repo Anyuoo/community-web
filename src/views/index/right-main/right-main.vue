@@ -80,10 +80,10 @@ export default {
         },
       ],
       links: [
-        { title: "LeetCode", link: "" },
-        { title: "牛客网", link: "" },
-        { title: "GitHub", link: "" },
-        { title: "Gitee", link: "" },
+        { title: "LeetCode", link: "https://leetcode-cn.com/" },
+        { title: "牛客网", link: "https://www.nowcoder.com/" },
+        { title: "GitHub", link: "https://github.com/" },
+        { title: "Gitee", link: "https://gitee.com/" },
       ],
     };
   },

@@ -45,6 +45,12 @@ const routes = [{
         component: () =>
             import('@/views/upload/upload'),
     },
+    {
+        path: '/resource',
+        name: 'Resource',
+        component: () =>
+            import('@/views/resource/resource'),
+    },
     ]
 },
 {

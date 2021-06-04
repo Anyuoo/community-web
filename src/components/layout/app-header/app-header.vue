@@ -63,7 +63,7 @@
               </el-dropdown-item>
 
               <el-dropdown-item divided>
-                <el-link :underline="false" @click="goUserProfile"
+                <el-link :underline="false" @click="goResourcePage"
                   >我的资源</el-link
                 >
               </el-dropdown-item>
@@ -132,6 +132,12 @@ export default {
     goUploadPage() {
       this.$router.push({
         name: "VideoUpload",
+      });
+    },
+    // 资源页
+    goResourcePage() {
+      this.$router.push({
+        name: "Resource",
       });
     },
   },

@@ -65,14 +65,11 @@ export default {
     };
   },
   created() {
-    console.log(this.url)
     this.playerOptions.sources.push({
       type: "video/mp4", // 类型
-      src: this.video.url,
-      // src: require("../assets/video.mp4"), // url地址
+      src: this.video.videoUrl,
     });
-    this.poster = this.video.poster
-    // require(this.url)
+    this.poster = this.video.coverUrl
   },
   methods: {
     // 播放回调
@@ -124,9 +121,6 @@ export default {
 </script>
 <style scoped>
 .home {
-  width: 240px;
-  height: 135px;
-  /* margin: 0 auto; */
   text-align: center;
 }
 </style>
